@@ -5,6 +5,13 @@ import { LocaleProvider } from '@/lib/i18n'
 export const metadata = {
   title: 'Aviso de privacidad | Fango Systems',
   description: 'Información sobre el tratamiento de datos personales de Fango Systems.',
+  alternates: {
+    canonical: '/aviso-de-privacidad',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function PrivacyPolicyPage() {

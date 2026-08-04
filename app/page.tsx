@@ -9,6 +9,19 @@ import { ChapterCta } from '@/components/chapter-cta'
 import { SiteFooter } from '@/components/site-footer'
 import { LocaleProvider } from '@/lib/i18n'
 
+export const metadata = {
+  title: 'Fango Systems — Diseñadores de operaciones de negocio',
+  description:
+    'Fango Systems es una consultora mexicana de evolución digital. Diseñamos claridad operativa para negocios en crecimiento.',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
 export default function Page() {
   return (
     <LocaleProvider>

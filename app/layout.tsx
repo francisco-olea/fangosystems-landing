@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, Manrope } from 'next/font/google'
+import { SITE_NAME, SITE_URL } from '@/lib/site'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -19,10 +20,15 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'Fango Systems — Diseñadores de operaciones de negocio',
   description:
     'Fango Systems es una consultora mexicana de evolución digital. Diseñamos claridad operativa para negocios en crecimiento. Menos software. Más flujo.',
   generator: 'v0.app',
+  applicationName: SITE_NAME,
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/iconofango.ico',
   },
@@ -31,6 +37,11 @@ export const metadata: Metadata = {
     description:
       'Diseñamos claridad operativa para negocios en crecimiento. Menos software. Más flujo.',
     type: 'website',
+    siteName: SITE_NAME,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 

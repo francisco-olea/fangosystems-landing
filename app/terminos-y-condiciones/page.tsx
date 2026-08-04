@@ -5,6 +5,13 @@ import { LocaleProvider } from '@/lib/i18n'
 export const metadata = {
   title: 'Términos y condiciones | Fango Systems',
   description: 'Términos y condiciones de uso del sitio web de Fango Systems.',
+  alternates: {
+    canonical: '/terminos-y-condiciones',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function TermsPage() {
